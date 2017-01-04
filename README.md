@@ -60,3 +60,76 @@ const Vue = require('vue')
 const Pagination = require('vue-bootstrap-pagination')
 Vue.component('pagination', Pagination)
 ```
+
+## Generated HTML for full template
+
+```html
+<ul class="pagination">
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./4" aria-label="Previous">«</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./1">1</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./2">2</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./3">3</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./4">4</a>
+    </li>
+    <li data-v-7e3a6e65="" class="active">
+        <a data-v-7e3a6e65="" href="./5">5</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./6">6</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./7">7</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./6" aria-label="Next">»</a>
+    </li>
+</ul>
+```
+
+## Generated HTML for narrow template
+
+```html
+<ul class="pagination">
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./4" aria-label="Previous">«</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./1">1</a>
+    </li>
+    <li data-v-7e3a6e65="" class="hellip disabled">
+        <span data-v-7e3a6e65="">…</span>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./4">4</a>
+    </li>
+    <li data-v-7e3a6e65="" class="active">
+        <a data-v-7e3a6e65="" href="./5">5</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./6">6</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./7">7</a>
+    </li>
+    <li data-v-7e3a6e65="" class="">
+        <a data-v-7e3a6e65="" href="./6" aria-label="Next">»</a>
+    </li>
+</ul>
+```
+
+## Testing
+
+Tested with Karma, PhantomJS, Jasmine & Jasmine-Jquery
+
+```
+npm t
+```
