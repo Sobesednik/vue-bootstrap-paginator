@@ -39,7 +39,7 @@ You can require the component in `Vue` components:
     </div>
 </template>
 <script>
-    const Pagination = require('vue-bootstrap-pagination')
+    const Pagination = require('vue-bootstrap-paginator')
     module.exports = {
         data: () => ({
             totalPages: 15,
