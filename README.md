@@ -1,6 +1,10 @@
 # vue-bootstrap-paginator
 A Vue.js 2 component for simple pagination with Bootstrap layout.
 
+```bash
+npm i --save vue-bootstrap-paginator
+```
+
 ### Narrow template
 
 ![narrow template](http://i.giphy.com/l4Jz78JMWi1As3fuo.gif)
