@@ -1,6 +1,8 @@
 # vue-bootstrap-paginator
 A Vue.js 2 component for simple pagination with Bootstrap layout.
 
+[![npm version](https://badge.fury.io/js/vue-bootstrap-paginator.svg)](https://badge.fury.io/js/vue-bootstrap-paginator)
+
 ```bash
 npm i --save vue-bootstrap-paginator
 ```
