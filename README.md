@@ -35,18 +35,30 @@ You can require the component in `Vue` components:
 ```vue
 <template>
     <div class="parent-component">
-        <pagination :page="1" :pages="15" :width="20" @change="onPageChange"></pagination>
+        <pagination :page="page" :pages="totalPages" :width="20" @change="onPageChange" :pageFn="pageFn"></pagination>
     </div>
 </template>
 <script>
     const Pagination = require('vue-bootstrap-pagination')
     module.exports = {
-        data: () => ({ ... }),
+        data: () => ({
+            totalPages: 15,
+        }),
         props: [ ... ],
         components: { Pagination },
         methods: {
             onPageChange: function (page) {
                 console.log('New page: %s', page)
+                this.$router.push(this.pageFn(page))
+            },
+            pageFn: function (page) {
+                return `./${page}`
+            },
+        },
+        computed: {
+            page: function () {
+                // when route param changes, change the page
+                return Number(this.$route.params.page) || 1
             },
         },
     }
