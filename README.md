@@ -44,7 +44,6 @@ You can require the component in `Vue` components:
         data: () => ({
             totalPages: 15,
         }),
-        props: [ ... ],
         components: { Pagination },
         methods: {
             onPageChange: function (page) {
@@ -54,12 +53,26 @@ You can require the component in `Vue` components:
             pageFn: function (page) {
                 return `./${page}`
             },
+            handleKeyUp: function (event) {
+                if (event.keyCode === 39 && this.page < this.totalPages) {
+                    this.$router.push(this.pageFn(this.page + 1))
+                }
+                if (event.keyCode === 37 && this.page > 1) {
+                    this.$router.push(this.pageFn(this.page - 1))
+                }
+            },
         },
         computed: {
             page: function () {
                 // when route param changes, change the page
                 return Number(this.$route.params.page) || 1
             },
+        },
+        created: function () {
+            window.addEventListener('keyup', this.handleKeyUp)
+        },
+        beforeDestroy: function () {
+            window.removeEventListener('keyup', this.handleKeyUp)
         },
     }
 </script>
